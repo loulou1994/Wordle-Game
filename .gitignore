@@ -1,0 +1,2 @@
+#Exclude dev depencies included in this project
+node_modules/

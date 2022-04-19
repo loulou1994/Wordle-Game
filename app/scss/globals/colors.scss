@@ -1,0 +1,19 @@
+:root {
+	--clr-letter: hsl(0, 0%, 0%);
+	--bg-color: hsl(0, 0%, 100%);
+	--clr-correct: hsl(112, 50%, 66%);
+	--clr-absent: hsl(197, 10%, 87%);
+	--clr-present:  hsl(30, 79%, 68%);
+	--letter-border: hsl(0, 0%, 77%);
+	--border-added: hsl(0, 0%, 55%);
+}
+
+:root.darkmode {
+	--clr-letter: hsl(0, 0%, 100%);
+	--bg-color: hsl(0, 0%, 0%);
+	--clr-correct: hsl(112, 37%, 50%);
+	--clr-absent: hsl(204, 4%, 77%);
+	--clr-present:  hsl(30, 54%, 56%);
+	--letter-border: hsl(0, 1%, 72%);
+	--border-added: hsl(0, 1%, 49%);
+}

@@ -1,0 +1,58 @@
+// letter pop-up animation
+.pop-in{
+    animation: popIn 100ms;
+}
+
+@keyframes popIn {
+    0% {
+        transform: scale(.8);
+        opacity: 0;
+    }
+
+    40% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+}
+
+.flip-in {
+    animation: flipIn 250ms forwards;
+}
+
+.flip-out {
+    animation: flipOut 250ms forwards;
+}
+
+@keyframes flipIn {
+    from {
+        transform: rotateX(0deg);
+    }
+
+    to {
+        transform: rotateX(-90deg);
+    }
+}
+
+@keyframes flipOut {
+    from {
+        transform: rotateX(-90deg);
+    }
+
+    to {
+        transform: rotateX(0deg);
+    }
+}
+
+.leap {
+    animation: hopping 250ms 1s forwards;
+}
+
+@keyframes hopping {
+    20%{
+        transform: translateY(-12px);
+    }
+
+    60% {
+        transform: translateY(0);
+    }
+}

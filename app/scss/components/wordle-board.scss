@@ -1,0 +1,44 @@
+@use '../util' as *;
+
+.board {
+    grid-template-rows: repeat(6, 1fr);
+    gap: rem(8);
+
+    &__row{
+        --gap: #{rem(8)};
+        grid-template-columns: repeat(5, 1fr);
+
+        >.tile-box {
+            flex: 1;
+            aspect-ratio: 1;
+            text-transform: uppercase;
+            color: var(--white);
+
+            &[data-state="empty"]{
+                border: 2px solid var(--letter-border);
+            }
+
+            &[data-state="added"]{
+                border: 2px solid var(--border-added);
+                color: var(--clr-letter);
+            }
+
+            &[data-state="absent"]{
+                background: var(--clr-absent);
+            }
+
+            &[data-state="misplaced"]{
+                background: var(--clr-present);
+            }
+
+            &[data-state="found"]{
+                background: var(--clr-correct);
+            }
+            
+            span {
+                font-size: var(--fs-600);
+                font-weight: 700;
+            }
+        }
+    }
+}

@@ -1,0 +1,31 @@
+@use '../util' as *;
+
+:root{
+	--fs-300: #{rem(14)};
+	--fs-400: #{rem(16)};
+	--fs-500: #{rem(20)};
+	--fs-600: #{rem(28)};
+	--fs-700: #{rem(28)};
+
+	@include breakpoint(large){
+		--fs-300: #{rem(18)};
+		--fs-400: #{rem(22)};
+		--fs-500: #{rem(28)};
+		--fs-600: #{rem(38)};
+		--fs-700: #{rem(40)};
+	}
+}
+
+
+h1,
+h2,
+h3 {
+	text-align: center;
+	line-height: 1.1;
+}
+
+a,
+a:visited,
+a:active {
+	text-decoration: none;
+}

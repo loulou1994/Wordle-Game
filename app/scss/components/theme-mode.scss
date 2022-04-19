@@ -1,0 +1,44 @@
+@use "../util/" as *;
+
+.mode-toggle {
+    width: min(85px, 33%);
+    position: absolute;
+    right: 0;
+    border: 0;
+    border-radius: rem(20);
+    padding: 0;
+    background-color: transparent;
+
+    .btn-bg {
+        position: absolute;
+        inset: 0;
+        border-radius: rem(20);
+        background-color: var(--clr-letter);
+        z-index: -1;
+    }
+
+    div{
+        --gap: #{rem(15)};
+        input{
+            opacity: 0;
+            flex-basis: 38%;
+            height: #{rem(33)};
+            cursor: pointer;
+        }
+    }
+
+    .toggle {
+        position: absolute;
+        top: 5%;
+        left: 3%;
+        width: 35%;
+        height: 94%;
+        border-radius: 50%;
+        transition: left 250ms ease-in-out;
+        background: var(--clr-present);
+    }
+
+    div > #dark:checked ~ .toggle {
+        left: 60%;
+    }
+}

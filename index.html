@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet"> 
+		<title></title>
+		<link rel="stylesheet" href="/dist/style.css"/>
+		<script defer src="/dist/script.js"></script>
+	</head>
+	<body>
+		<main>
+			<div class="container flow">
+				<h1>Wordle Clone</h1>
+				<section class="board grid">
+					<div id="tiles1" class="board__row grid" data-letters="">
+						<div class="tile-box flex" data-state="empty"><span></span></div>
+						<div class="tile-box flex" data-state="empty"><span></span></div>
+						<div class="tile-box flex" data-state="empty"><span></span></div>
+						<div class="tile-box flex" data-state="empty"><span></span></div>
+						<div class="tile-box flex" data-state="empty"><span></span></div>
+					</div>
+					<div id="tiles2" class="board__row grid" data-letters="">
+						<div class="tile-box flex" data-state="empty"><span></span></div>
+						<div class="tile-box flex" data-state="empty"><span></span></div>
+						<div class="tile-box flex" data-state="empty"><span></span></div>
+						<div class="tile-box flex" data-state="empty"><span></span></div>
+						<div class="tile-box flex" data-state="empty"><span></span></div>
+					</div>
+					<div id="tiles3" class="board__row grid" data-letters="">
+						<div class="tile-box flex" data-state="empty"><span></span></div>
+						<div class="tile-box flex" data-state="empty"><span></span></div>
+						<div class="tile-box flex" data-state="empty"><span></span></div>
+						<div class="tile-box flex" data-state="empty"><span></span></div>
+						<div class="tile-box flex" data-state="empty"><span></span></div>
+					</div>
+					<div id="tiles4" class="board__row grid" data-letters="">
+						<div class="tile-box flex" data-state="empty"><span></span></div>
+						<div class="tile-box flex" data-state="empty"><span></span></div>
+						<div class="tile-box flex" data-state="empty"><span></span></div>
+						<div class="tile-box flex" data-state="empty"><span></span></div>
+						<div class="tile-box flex" data-state="empty"><span></span></div>
+					</div>
+					<div id="tiles5" class="board__row grid" data-letters="">
+						<div class="tile-box flex" data-state="empty"><span></span></div>
+						<div class="tile-box flex" data-state="empty"><span></span></div>
+						<div class="tile-box flex" data-state="empty"><span></span></div>
+						<div class="tile-box flex" data-state="empty"><span></span></div>
+						<div class="tile-box flex" data-state="empty"><span></span></div>
+					</div>
+					<div id="tiles6" class="board__row grid" data-letters="">
+						<div class="tile-box flex" data-state="empty"><span></span></div>
+						<div class="tile-box flex" data-state="empty"><span></span></div>
+						<div class="tile-box flex" data-state="empty"><span></span></div>
+						<div class="tile-box flex" data-state="empty"><span></span></div>
+						<div class="tile-box flex" data-state="empty"><span></span></div>
+					</div>
+				</section>
+				<button class="mode-toggle">
+					<span class="btn-bg"></span>
+					<div class="flex">
+						<input type="radio" name="theme-mode" id="light">
+						<label for="light" class="sr-only">
+							light-scheme
+						</label>
+						<input type="radio" name="theme-mode" id="dark">
+						<label for="dark" class="sr-only">
+							dark-scheme
+						</label>
+						<span class="toggle"></span>
+					</div>
+				</button>
+			</div>
+		</main>
+	</body>
+</html>

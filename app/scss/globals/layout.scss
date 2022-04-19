@@ -1,0 +1,21 @@
+@use '../util' as *;
+
+.container {
+	position: relative;
+	width: Min(rem(320), 95%);
+	margin-inline: auto;
+}
+
+.flex {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.grid {
+	display: grid;
+}
+
+.flex, .grid {
+	gap: var(--gap, 1rem);
+}
