@@ -1,11 +1,32 @@
-const words = ["raise", "claim", "blame", "proud", "broad"]
+const words = [
+	[
+		"raise", "Elevate"
+	],[
+		"claim", "Allegation"
+	],[
+		"blame", "Fault"
+	], [
+		"pride", "Deadly sin"
+	], [
+		"broad", "large"
+	]
+]
 const regExprson = /^[A-Z]$/
-
 let tilesRow = 1;
-let guessedWord, guessWord;
+let guessedWord;
 let tileBoxes = document.querySelector('#tiles1');
 
-randomWord(words.length);
+const guessWord = randomWord(words.length);
+const hintElement = document.querySelector('.word-hint');
+
+function randomWord(maxWords){
+	const randomWord = words[Math.floor(Math.random() * maxWords)];
+	setTimeout(() => {
+		hintElement.textContent += randomWord[1];
+		hintElement.classList.add("hint-box");
+	}, 500);
+	return randomWord[0];
+}
 
 window.addEventListener('keydown', e => {
 	const letter = e.key.toLocaleUpperCase();
@@ -42,10 +63,6 @@ colorSchemeMedia.addEventListener("change", e => {
 		darkToggle.checked = false;
 	}
 });
-
-function randomWord(maxWords){
-	guessWord = words[Math.floor(Math.random() * maxWords)];
-}
 
 function removeLetter(){
 	const tileIndex = tileBoxes.dataset.letters.length - 1;
